@@ -1,0 +1,4 @@
+[core]
+    remote = almacenamiento-s3
+['remote "almacenamiento-s3"']
+    url = s3://juanse919-miad-dvc-2026
