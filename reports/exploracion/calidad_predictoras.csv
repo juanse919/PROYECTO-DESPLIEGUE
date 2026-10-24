@@ -1,0 +1,25 @@
+,Faltantes,% faltantes,Mínimo,Máximo
+estu_etnia,5358404,75.06,,
+estu_tieneetnia,3036271,42.53,,
+estu_inse_individual,1110472,15.56,11.347243309020996,88.36628
+punt_global,1065514,14.93,0.0,500.0
+fami_tienecomputador,93953,1.32,,
+fami_cuartoshogar,90416,1.27,,
+fami_personashogar,85604,1.2,,
+fami_estratovivienda,47273,0.66,,
+punt_ingles,29313,0.41,-1.0,100.0
+fami_tieneinternet,21194,0.3,,
+cole_jornada,1709,0.02,,
+cole_area_ubicacion,641,0.01,,
+año,0,0.0,,
+cole_calendario,250,0.0,,
+estu_genero,0,0.0,,
+estu_edad,0,0.0,,
+cole_genero,0,0.0,,
+cole_cod_depto_ubicacion,0,0.0,,
+punt_matematicas,0,0.0,0.0,127.0
+punt_lectura_critica,0,0.0,0.0,100.0
+punt_c_naturales,2,0.0,0.0,100.0
+fami_educacionmadre,0,0.0,,
+cole_naturaleza,0,0.0,,
+enroll_full,0,0.0,,

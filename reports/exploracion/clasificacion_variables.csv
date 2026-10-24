@@ -1,0 +1,90 @@
+Variable,Etiqueta,Tipo,Clasificación
+periodo,Periodo de presentación del examen,int16,Identificador
+año,Año de presentación del examen,int16,Predictora candidata
+estu_fechanacimiento,Fecha de nacimiento [DD/MM/AAAA],str,Identificador
+estu_genero,Género,int8,Predictora candidata
+estu_edad,Edad del evaluado al presentar el examen,int8,Predictora candidata
+estu_consecutivo,Id público del inscrito (SB11),str,Identificador
+estu_etnia,Grupo étnico minoritario al que pertenece,str,Predictora candidata
+cole_cod_dane_establecimiento,Código DANE del establecimiento educativo,str,Identificador
+cole_genero,Género de la población del establecimiento,str,Predictora candidata
+cole_calendario,Calendario académico del establecimiento,str,Predictora candidata
+cole_area_ubicacion,Área de ubicación de la sede,str,Predictora candidata
+cole_jornada,Jornada de la sede,str,Predictora candidata
+cole_cod_mcpio_ubicacion,Código DANE del municipio donde está ubicada la sede,int32,Identificador
+cole_cod_depto_ubicacion,Código DANE del departamento de la sede,int8,Predictora candidata
+punt_matematicas,Puntaje en matemáticas,int16,Predictora candidata
+punt_ingles,,int8,Predictora candidata
+punt_lectura_critica,Puntaje en lectura crítica,int8,Predictora candidata
+punt_c_naturales,,int8,Predictora candidata
+punt_global,,float64,Predictora candidata
+estu_inse_individual,Índice socioeconómico del evaluado,float32,Predictora candidata
+estu_tieneetnia,Pertenece a un grupo étnico minoritario,str,Predictora candidata
+fami_educacionmadre,Nivel educativo más alto alcanzado por la madre,int8,Predictora candidata
+fami_estratovivienda,Estrato socioeconómico de la vivienda según recibo de energía eléctrica,int8,Predictora candidata
+fami_cuartoshogar,Cuartos en los que duermen las personas del hogar,int8,Predictora candidata
+fami_personashogar,"Personas que conforman el hogar, incluido el evaluado",int8,Predictora candidata
+fami_tienecomputador,Hogar posee computador,int8,Predictora candidata
+fami_tieneinternet,Hogar cuenta con servicio o conexión a internet,int8,Predictora candidata
+cole_naturaleza,Naturaleza del establecimiento,int8,Predictora candidata
+ies1,IES del primer programa,float64,Posterior al ingreso (excluir)
+programa_id1,ID del primer programa,float64,Posterior al ingreso (excluir)
+prim_sem1,Primer semestre del primer programa,float64,Posterior al ingreso (excluir)
+program_code1,Código del primer programa,float64,Posterior al ingreso (excluir)
+enroll1,Matrícula en el primer programa,float64,Posterior al ingreso (excluir)
+year_activo1,Año activo en el primer programa,float64,Posterior al ingreso (excluir)
+year_enrolls1,Años inscritos en el primer programa,float64,Posterior al ingreso (excluir)
+id_mun_programa1,Código del municipio del primer programa,float64,Posterior al ingreso (excluir)
+ies2,IES del segundo programa,float64,Posterior al ingreso (excluir)
+programa_id2,ID del segundo programa,float64,Posterior al ingreso (excluir)
+prim_sem2,Primer semestre del segundo programa,float64,Posterior al ingreso (excluir)
+program_code2,Código del segundo programa,float64,Posterior al ingreso (excluir)
+enroll2,Matrícula en el segundo programa,float64,Posterior al ingreso (excluir)
+year_activo2,Año activo en el segundo programa,float64,Posterior al ingreso (excluir)
+year_enrolls2,Años inscritos en el segundo programa,float64,Posterior al ingreso (excluir)
+id_mun_programa2,Código del municipio del segundo programa,float64,Posterior al ingreso (excluir)
+ies3,IES del tercer programa,float64,Posterior al ingreso (excluir)
+programa_id3,ID del tercer programa,float64,Posterior al ingreso (excluir)
+prim_sem3,Primer semestre del tercer programa,float64,Posterior al ingreso (excluir)
+program_code3,Código del tercer programa,float64,Posterior al ingreso (excluir)
+enroll3,Matrícula en el tercer programa,float64,Posterior al ingreso (excluir)
+year_activo3,Año activo en el tercer programa,float64,Posterior al ingreso (excluir)
+year_enrolls3,Años inscritos en el tercer programa,float64,Posterior al ingreso (excluir)
+id_mun_programa3,Código del municipio del tercer programa,float64,Posterior al ingreso (excluir)
+ies4,IES del cuarto programa,float64,Posterior al ingreso (excluir)
+programa_id4,ID del cuarto programa,float64,Posterior al ingreso (excluir)
+prim_sem4,Primer semestre del cuarto programa,float64,Posterior al ingreso (excluir)
+program_code4,Código del cuarto programa,float64,Posterior al ingreso (excluir)
+enroll4,Matrícula en el cuarto programa,float64,Posterior al ingreso (excluir)
+year_activo4,Año activo en el cuarto programa,float64,Posterior al ingreso (excluir)
+year_enrolls4,Años inscritos en el cuarto programa,float64,Posterior al ingreso (excluir)
+id_mun_programa4,Código del municipio del cuarto programa,float64,Posterior al ingreso (excluir)
+enroll_full,Ingreso a educación superior,int8,Objetivo
+prim_year1,Año del primer programa,float64,Posterior al ingreso (excluir)
+year_enrolled,Año de ingreso a educación superior,float64,Posterior al ingreso (excluir)
+ventana_sb11_es,Ventana entre Saber 11° e ingreso a educación superior,float64,Posterior al ingreso (excluir)
+enroll_5years,Ingreso a educación superior hasta 5 años después de Saber 11°,int8,Objetivo alterno (excluir)
+enroll_3years,Ingreso a educación superior hasta 3 años después de Saber 11°,int8,Objetivo alterno (excluir)
+enroll_tti,Ingreso inmediato a educación superior,int8,Objetivo alterno (excluir)
+estu_cod_reside_mcpio_p,Código del municipio de residencia - Saber Pro y TyT,str,Posterior al ingreso (excluir)
+estu_etnia_p,Etnia del estudiante - Saber Pro y TyT,str,Posterior al ingreso (excluir)
+estu_inst_codmunicipio_p,Código del municipio de la institución - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+estu_nucleo_pregrado_p,Núcleo de pregrado - Saber Pro y TyT,str,Posterior al ingreso (excluir)
+estu_prgm_codmunicipio_p,Código del municipio del programa - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+estu_snies_prgmacademico_p,Código SNIES del programa académico - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+gruporeferencia_p,Grupo de referencia - Saber Pro y TyT,str,Posterior al ingreso (excluir)
+inst_cod_institucion_p,Código de la institución - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+mod_competen_ciudada_punt_p,Puntaje de competencias ciudadanas - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+mod_comuni_escrita_desem_p,Desempeño en comunicación escrita - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+mod_comuni_escrita_punt_p,Puntaje de comunicación escrita - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+mod_ingles_punt_p,Puntaje de inglés - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+mod_lectura_critica_punt_p,Puntaje de lectura crítica - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+mod_razona_cuantitat_punt_p,Puntaje de razonamiento cuantitativo - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+periodo_p,Periodo de la prueba - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+prueba_p,Tipo de prueba (Saber Pro o TyT),float64,Posterior al ingreso (excluir)
+estu_nivel_prgm_academico_p,Nivel del programa académico - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+estu_metodo_prgm_p,Método del programa - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+inst_caracter_academico_p,Carácter académico de la institución - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+inst_origen_p,Origen de la institución - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+año_p,Año de aplicación de la prueba - Saber Pro y TyT,float64,Posterior al ingreso (excluir)
+ventana_sb11_protyt,Ventana de tiempo entre Saber 11 y Pro TyT,float64,Posterior al ingreso (excluir)
