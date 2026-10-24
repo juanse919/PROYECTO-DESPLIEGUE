@@ -1,5 +1,5 @@
 """
-Visualizaciones para el reporte de la Entrega 1 (Andrea Correa).
+Visualizaciones para el reporte de la Entrega 1.
 
 Genera, a partir de las tablas agregadas de reports/exploracion/
 (producidas en 02_Exploracion_Variables.ipynb), las figuras del reporte:
