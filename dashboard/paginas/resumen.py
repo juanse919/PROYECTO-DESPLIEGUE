@@ -123,7 +123,15 @@ def grafica_departamentos() -> go.Figure:
             zmax=75,
             marker_line_color="white",
             marker_line_width=0.8,
-            colorbar=dict(title="Tasa de ingreso", ticksuffix=" %"),
+            colorbar=dict(
+                title=dict(text="Tasa de ingreso", side="right"),
+                ticksuffix=" %",
+                len=0.78,
+                y=0.5,
+                thickness=16,
+                x=0.91,
+                outlinewidth=0,
+            ),
             hovertemplate=(
                 "<b>%{customdata[0]}</b><br>"
                 "Tasa de ingreso: %{z:.2f} %<br>"
@@ -131,11 +139,17 @@ def grafica_departamentos() -> go.Figure:
             ),
         ))
         fig.update_geos(
-            fitbounds="locations", visible=False, showcountries=False,
-            showcoastlines=False, bgcolor="rgba(0,0,0,0)",
+            fitbounds="locations",
+            visible=False,
+            showcountries=False,
+            showcoastlines=False,
+            bgcolor="rgba(0,0,0,0)",
+            domain=dict(x=[0.04, 0.84], y=[0.02, 0.98]),
         )
         fig.update_layout(
-            height=640, margin=dict(l=0, r=0, t=10, b=0),
+            height=460,
+            autosize=True,
+            margin=dict(l=8, r=48, t=8, b=8),
             paper_bgcolor="rgba(0,0,0,0)",
             font=dict(family="Segoe UI, Inter, Helvetica, Arial, sans-serif", color=AZUL_OSCURO),
         )
@@ -146,7 +160,7 @@ def grafica_departamentos() -> go.Figure:
             x=0.5, y=0.5, xref="paper", yref="paper", showarrow=False,
             font=dict(color=GRIS, size=13),
         )
-        fig.update_layout(height=640, margin=dict(l=10, r=10, t=10, b=10))
+        fig.update_layout(height=460, margin=dict(l=8, r=8, t=8, b=8))
 
     return fig
 
@@ -204,7 +218,12 @@ def layout() -> html.Div:
 
         html.Div(className="fila", children=[
             panel("Ingreso por departamento del colegio",
-                  dcc.Graph(figure=grafica_departamentos(), config={"displayModeBar": False}),
+                  dcc.Graph(
+                      figure=grafica_departamentos(),
+                      config={"displayModeBar": False, "responsive": True},
+                      responsive=True,
+                      style={"height": "460px", "width": "100%"},
+                  ),
                   "Tasa de ingreso observado según el departamento de ubicación del colegio. "
                   "Pasa el cursor sobre cada departamento para consultar la tasa y los estudiantes."),
             panel("¿Cuándo ingresan los bachilleres?",
