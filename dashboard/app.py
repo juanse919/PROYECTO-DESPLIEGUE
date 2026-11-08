@@ -1,6 +1,5 @@
 """Tablero "Trayectorias estudiantiles | Saber 11 → Educación Superior".
 
-Ejecución local (desde la carpeta dashboard):
     pip install -r requirements.txt
     python app.py
 y abrir http://127.0.0.1:8050 en el navegador.
