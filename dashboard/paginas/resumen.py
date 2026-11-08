@@ -1,5 +1,9 @@
 """Página Resumen: indicadores generales del tránsito de Saber 11 a la educación superior."""
 
+import json
+import re
+from urllib.request import urlopen
+
 import plotly.graph_objects as go
 from dash import Input, Output, callback, dcc, html
 
@@ -53,19 +57,98 @@ def grafica_estrato() -> go.Figure:
 
 
 def grafica_departamentos() -> go.Figure:
-    fig = go.Figure(go.Bar(
-        x=DEPARTAMENTOS["tasa"], y=DEPARTAMENTOS["departamento"], orientation="h",
-        marker=dict(color=DEPARTAMENTOS["tasa"], colorscale=[[0, TURQUESA_CLARO], [1, AZUL_OSCURO]]),
-        customdata=DEPARTAMENTOS["estudiantes"],
-        hovertemplate="%{y}<br>Tasa de ingreso: %{x:.1f} %<br>Estudiantes: %{customdata:,}<extra></extra>",
-    ))
-    promedio = 100 * DEPARTAMENTOS["ingresaron"].sum() / DEPARTAMENTOS["estudiantes"].sum()
-    fig.add_vline(x=promedio, line_dash="dash", line_color=AMARILLO,
-                  annotation_text=f"Nacional {formato_numero(promedio, 1)} %",
-                  annotation_position="top")
-    fig.update_xaxes(range=[0, 80], ticksuffix=" %")
-    fig.update_yaxes(tickfont=dict(size=11))
-    return aplicar_formato(fig, alto=640)
+    """Mapa coroplético de la tasa de ingreso por departamento del colegio."""
+    url_geojson = (
+        "https://raw.githubusercontent.com/ytolosa/mapas-colombia/"
+        "main/output/geojson/col_departamentos_inset_nacional.geojson"
+    )
+    fig = go.Figure()
+
+    try:
+        with urlopen(url_geojson, timeout=15) as respuesta:
+            geojson = json.load(respuesta)
+
+        def normalizar_codigo(valor):
+            return re.sub(r"\D", "", str(valor)).lstrip("0")
+
+        caracteristicas = geojson.get("features", [])
+        if not caracteristicas:
+            raise ValueError("El archivo geográfico no contiene departamentos.")
+
+        codigos_datos = DEPARTAMENTOS["categoria"].astype(int).astype(str).tolist()
+        propiedades = caracteristicas[0].get("properties", {})
+        clave_codigo = None
+        mejor_coincidencia = 0
+
+        for clave in propiedades:
+            codigos_mapa = {
+                normalizar_codigo(feature.get("properties", {}).get(clave))
+                for feature in caracteristicas
+            }
+            coincidencias = sum(
+                normalizar_codigo(codigo) in codigos_mapa for codigo in codigos_datos
+            )
+            if coincidencias > mejor_coincidencia:
+                mejor_coincidencia = coincidencias
+                clave_codigo = clave
+
+        if clave_codigo is None or mejor_coincidencia < 20:
+            raise ValueError("No se pudieron relacionar los códigos DANE con el mapa.")
+
+        codigos_mapa = {
+            normalizar_codigo(feature["properties"][clave_codigo]):
+            feature["properties"][clave_codigo]
+            for feature in caracteristicas
+            if clave_codigo in feature.get("properties", {})
+        }
+        departamentos_validos = DEPARTAMENTOS[
+            DEPARTAMENTOS["categoria"].astype(int).astype(str).map(
+                lambda codigo: normalizar_codigo(codigo) in codigos_mapa
+            )
+        ].copy()
+        departamentos_validos["codigo_mapa"] = departamentos_validos[
+            "categoria"
+        ].astype(int).astype(str).map(
+            lambda codigo: codigos_mapa[normalizar_codigo(codigo)]
+        )
+
+        fig.add_trace(go.Choropleth(
+            geojson=geojson,
+            featureidkey=f"properties.{clave_codigo}",
+            locations=departamentos_validos["codigo_mapa"],
+            z=departamentos_validos["tasa"],
+            customdata=departamentos_validos[["departamento", "estudiantes"]].to_numpy(),
+            colorscale=[[0, TURQUESA_CLARO], [0.5, TURQUESA], [1, AZUL_OSCURO]],
+            zmin=30,
+            zmax=75,
+            marker_line_color="white",
+            marker_line_width=0.8,
+            colorbar=dict(title="Tasa de ingreso", ticksuffix=" %"),
+            hovertemplate=(
+                "<b>%{customdata[0]}</b><br>"
+                "Tasa de ingreso: %{z:.2f} %<br>"
+                "Estudiantes: %{customdata[1]:,}<extra></extra>"
+            ),
+        ))
+        fig.update_geos(
+            fitbounds="locations", visible=False, showcountries=False,
+            showcoastlines=False, bgcolor="rgba(0,0,0,0)",
+        )
+        fig.update_layout(
+            height=640, margin=dict(l=0, r=0, t=10, b=0),
+            paper_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Segoe UI, Inter, Helvetica, Arial, sans-serif", color=AZUL_OSCURO),
+        )
+    except Exception as error:
+        fig.add_annotation(
+            text=("No fue posible cargar el mapa geográfico. "
+                  "Verifica la conexión a internet y vuelve a cargar la página."),
+            x=0.5, y=0.5, xref="paper", yref="paper", showarrow=False,
+            font=dict(color=GRIS, size=13),
+        )
+        fig.update_layout(height=640, margin=dict(l=10, r=10, t=10, b=10))
+
+    return fig
 
 
 def grafica_horizonte() -> go.Figure:
@@ -122,7 +205,8 @@ def layout() -> html.Div:
         html.Div(className="fila", children=[
             panel("Ingreso por departamento del colegio",
                   dcc.Graph(figure=grafica_departamentos(), config={"displayModeBar": False}),
-                  "Ingreso observado, todas las cohortes. La línea amarilla marca el promedio nacional."),
+                  "Tasa de ingreso observado según el departamento de ubicación del colegio. "
+                  "Pasa el cursor sobre cada departamento para consultar la tasa y los estudiantes."),
             panel("¿Cuándo ingresan los bachilleres?",
                   dcc.Graph(figure=grafica_horizonte(), config={"displayModeBar": False}),
                   "Momento del primer ingreso respecto al año de Saber 11, todas las cohortes. "
