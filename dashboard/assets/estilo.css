@@ -1,0 +1,80 @@
+/* Estilos del tablero (paleta de la maqueta de la Entrega 1) */
+:root {
+  --azul-oscuro: #14394A;
+  --azul: #1F5F7A;
+  --turquesa: #2A9D9A;
+  --amarillo: #F2C14E;
+  --fondo: #F1F5F6;
+  --texto: #14394A;
+  --gris: #6B7C85;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+}
+
+.contenedor { display: flex; min-height: 100vh; }
+
+/* Menú lateral */
+.menu {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--azul-oscuro);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; margin-bottom: 30px; }
+.marca-icono {
+  width: 34px; height: 34px; border-radius: 8px; background: var(--turquesa);
+  display: flex; align-items: center; justify-content: center; color: var(--amarillo); font-weight: 800;
+}
+.menu nav { display: flex; flex-direction: column; gap: 6px; }
+.menu-enlace {
+  color: #DCE7EA; text-decoration: none; padding: 10px 12px; border-radius: 8px; font-weight: 600;
+}
+.menu-enlace:hover { background: rgba(255, 255, 255, 0.08); }
+.menu-enlace.activo { background: rgba(255, 255, 255, 0.14); color: #fff; }
+.menu-pie { margin-top: auto; font-size: 11px; color: #9DB4BC; }
+
+/* Contenido */
+.contenido { flex: 1; padding: 24px 28px; min-width: 0; }
+.encabezado h1 { margin: 0 0 4px; font-size: 28px; }
+.encabezado p { margin: 0 0 18px; color: var(--gris); }
+
+.tarjeta {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(20, 57, 74, 0.08);
+  padding: 16px 18px;
+}
+
+.filtro { margin-bottom: 16px; }
+.filtro-titulo { font-weight: 600; margin-bottom: 8px; }
+.aviso { color: #9A6B00; font-size: 13px; margin-top: 6px; min-height: 18px; }
+
+.fila-indicadores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+.indicador { border-top: 4px solid var(--amarillo); }
+.indicador-titulo { font-size: 15px; font-weight: 600; color: var(--gris); }
+.indicador-valor { font-size: 30px; font-weight: 700; margin: 6px 0 2px; }
+.indicador-detalle { font-size: 13px; color: var(--gris); }
+
+.fila { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
+.fila .panel:only-child { grid-column: 1 / -1; }
+.panel h3 { margin: 0 0 8px; font-size: 18px; }
+.nota { font-size: 12px; color: var(--gris); margin: 6px 0 0; }
+
+@media (max-width: 1000px) {
+  .contenedor { flex-direction: column; }
+  .menu { width: 100%; height: auto; position: static; }
+  .fila, .fila-indicadores { grid-template-columns: 1fr; }
+}
