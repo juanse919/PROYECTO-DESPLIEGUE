@@ -7,7 +7,7 @@ y abrir http://127.0.0.1:8050 en el navegador.
 
 from dash import Dash, Input, Output, dcc, html
 
-from paginas import acerca, brechas, resumen
+from paginas import acerca, brechas, resumen, modelos
 
 app = Dash(
     __name__,
@@ -22,6 +22,7 @@ PAGINAS = [
     ("/", "Resumen", resumen),
     ("/brechas", "Brechas", brechas),
     ("/acerca", "Acerca del proyecto", acerca),
+    ("/modelos", "Resultados de modelos", modelos),
 ]
 
 

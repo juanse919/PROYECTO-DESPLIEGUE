@@ -24,6 +24,7 @@ Luego abrir http://127.0.0.1:8050.
 | `paginas/resumen.py` | Página Resumen: indicadores, evolución por cohorte, estrato, departamento y momento del ingreso | Andrea Correa |
 | `paginas/brechas.py` | Página Brechas | Paula Guarín |
 | `paginas/acerca.py` | Página Acerca del proyecto | Paula Guarín |
+| `paginas/modelos.py` | Página de resultados y comparación de modelos predictivos | Paula Guarín |
 
 ## Datos
 
