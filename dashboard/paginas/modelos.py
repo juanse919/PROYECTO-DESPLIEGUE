@@ -2,7 +2,7 @@
 
 from dash import html
 import plotly.graph_objects as go
-from estilo import aplicar_formato, AZUL_OSCURO, AZUL, TURQUESA
+from estilo import aplicar_formato, formato_numero, AZUL_OSCURO, AZUL, TURQUESA
 
 RESULTADOS = {
     "Regresión logística": {
@@ -31,7 +31,7 @@ def layout():
         html.Tr([
             html.Th(metrica),
             *[
-                html.Td(f"{RESULTADOS[modelo][metrica]:.4f}")
+                html.Td(formato_numero(RESULTADOS[modelo][metrica], 4))
                 for modelo in modelos
             ],
         ])

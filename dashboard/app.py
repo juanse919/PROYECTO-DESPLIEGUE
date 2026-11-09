@@ -78,4 +78,4 @@ def resaltar_enlace(ruta: str):
 
 if __name__ == "__main__":
     # host 0.0.0.0 para poder abrirlo desde fuera cuando se ejecute en EC2 o en Docker
-    app.run(host="0.0.0.0", port=8050, debug=True)
+    app.run(host="0.0.0.0", port=8050, debug=False)

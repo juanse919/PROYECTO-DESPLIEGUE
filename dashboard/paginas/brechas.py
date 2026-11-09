@@ -71,7 +71,7 @@ def _grafica_deciles():
         mode="lines+markers+text",
         line=dict(color=AZUL, width=3),
         marker=dict(color=TURQUESA, size=9),
-        text=[f"{valor:.1f}%" for valor in DECILES["enroll_full"]],
+        text=[f"{formato_numero(valor, 1)}%" for valor in DECILES["enroll_full"]],
         textposition="top center",
         hovertemplate="Decil %{x}<br>Tasa de ingreso: %{y:.2f} %<extra></extra>",
     ))
