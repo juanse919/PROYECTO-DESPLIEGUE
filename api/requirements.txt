@@ -1,0 +1,4 @@
+./model-pkg/modelo_ingreso-0.0.1-py3-none-any.whl
+fastapi>=0.110,<1.0
+uvicorn>=0.29,<1.0
+loguru>=0.7,<1.0
