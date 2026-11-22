@@ -1,13 +1,13 @@
 estu_etnia,Estudiantes,Ingresaron,% del total,Tasa ingreso (%)
-Achagua,42,11,0.0,26.19
-Afrodescendiente,31393,16739,0.44,53.32
+Achagua,42,8,0.0,19.05
+Afrodescendiente,31393,16651,0.44,53.04
 Ambalo,115,32,0.0,27.83
 Amorúa,30,0,0.0,0.0
 Andaqui,8,0,0.0,0.0
 Andoque,16,5,0.0,31.25
-Arhuaco,1484,695,0.02,46.83
+Arhuaco,1484,577,0.02,38.88
 Arzario,3,1,0.0,33.33
-Awa,1180,229,0.02,19.41
+Awa,1180,228,0.02,19.32
 Baniva,8,3,0.0,37.5
 Bara,60,6,0.0,10.0
 Barasano,41,3,0.0,7.32
@@ -15,7 +15,7 @@ Bari,39,13,0.0,33.33
 Betoye (Guahibo),10,8,0.0,80.0
 Bora,42,1,0.0,2.38
 Camentsa (Kamsa - Kamentsa),405,139,0.01,34.32
-Cancuamo,4131,2021,0.06,48.92
+Cancuamo,4131,1431,0.06,34.64
 Cariachil,26,7,0.0,26.92
 Chami,114,16,0.0,14.04
 Chapa,6,2,0.0,33.33
@@ -23,44 +23,44 @@ Chimilas,47,12,0.0,25.53
 Chiricoa,4,2,0.0,50.0
 Ciriano,1,0,0.0,0.0
 Cocama,136,21,0.0,15.44
-Coconuco,662,191,0.01,28.85
-Comunidad afrodescendiente,113841,62018,1.59,54.48
-Comunidades Rom (Gitanas),390,232,0.01,59.49
+Coconuco,662,189,0.01,28.55
+Comunidad afrodescendiente,113841,47818,1.59,42.0
+Comunidades Rom (Gitanas),390,179,0.01,45.9
 Coreguaje,95,19,0.0,20.0
 Corocoro,2,1,0.0,50.0
-Cubeo,1248,406,0.02,32.53
+Cubeo,1248,310,0.02,24.84
 Cuiva (Cuiba - Kuiva),31,2,0.0,6.45
 Cuna (Tule),63,15,0.0,23.81
-Curripaco,250,85,0.0,34.0
+Curripaco,250,84,0.0,33.6
 Desano,175,50,0.0,28.57
-Embera Chami,1872,390,0.03,20.83
-Embera Katio,583,117,0.01,20.07
-Embera dobida,514,42,0.01,8.17
-Embera eperara,20,3,0.0,15.0
-Emberá,7741,2701,0.11,34.89
+Embera Chami,1872,348,0.03,18.59
+Embera Katio,583,81,0.01,13.89
+Embera dobida,514,36,0.01,7.0
+Embera eperara,20,2,0.0,10.0
+Emberá,7741,1913,0.11,24.71
 Eperara,1,0,0.0,0.0
-Eperara Siapidara,147,23,0.0,15.65
+Eperara Siapidara,147,22,0.0,14.97
 Garu,3,0,0.0,0.0
 Guahibo,16,3,0.0,18.75
 Guahibo (amorua),1,1,0.0,100.0
-Guambiano,2322,925,0.03,39.84
+Guambiano,2322,688,0.03,29.63
 Guanaca,1,0,0.0,0.0
-Guanano (Wanano),133,28,0.0,21.05
+Guanano (Wanano),133,27,0.0,20.3
 Guariquema,1,0,0.0,0.0
 Guayabero (Autodenomicacion Jiw),14,0,0.0,0.0
-Hitnu,10,2,0.0,20.0
-Huitoto,768,348,0.01,45.31
-Inga,3791,1936,0.05,51.07
+Hitnu,10,1,0.0,10.0
+Huitoto,768,219,0.01,28.52
+Inga,3791,1461,0.05,38.54
 Inga kichwa,12,3,0.0,25.0
-Kamentsa biya,107,30,0.0,28.04
+Kamentsa biya,107,29,0.0,27.1
 Kamsa,19,5,0.0,26.32
-Kankuamo,967,404,0.01,41.78
+Kankuamo,967,400,0.01,41.37
 Karapana (Carapana),28,5,0.0,17.86
 Karijona (Carijona),10,1,0.0,10.0
 Kawiyari (Cabiyari),8,0,0.0,0.0
-Kichwa,148,41,0.0,27.7
-Kizgo (Quisgo),189,44,0.0,23.28
-Kofan,82,35,0.0,42.68
+Kichwa,148,38,0.0,25.68
+Kizgo (Quisgo),189,42,0.0,22.22
+Kofan,82,34,0.0,41.46
 Kogui,156,21,0.0,13.46
 Letuama,18,1,0.0,5.56
 Macaguaje,6,3,0.0,50.0
@@ -68,50 +68,50 @@ Macahua(N),18,3,0.0,16.67
 Maku,1,0,0.0,0.0
 Makuna,80,10,0.0,12.5
 Masiware (Masiguare - Maiben),31,5,0.0,16.13
-Matapí,31,5,0.0,16.13
+Matapí,31,4,0.0,12.9
 Miraña,8,3,0.0,37.5
 Mirańa,7,0,0.0,0.0
-Misak,331,53,0.0,16.01
-Mokana,1033,379,0.01,36.69
+Misak,331,47,0.0,14.2
+Mokana,1033,375,0.01,36.3
 Motilon bari,1,0,0.0,0.0
 Muinane,21,6,0.0,28.57
-Muisca,326,160,0.0,49.08
+Muisca,326,153,0.0,46.93
 Mura,1,0,0.0,0.0
 Murui (Murui - Wito),116,30,0.0,25.86
 Murui muina,44,17,0.0,38.64
 Murui-wito,3,1,0.0,33.33
 Muruy,15,4,0.0,26.67
-Nasa,3857,608,0.05,15.76
+Nasa,3857,576,0.05,14.93
 Negritudes,1268,538,0.02,42.43
-Ninguno,1417952,975084,19.86,68.77
+Ninguno,1417952,768341,19.86,54.19
 Nonuya,2,1,0.0,50.0
 Nukak,2,0,0.0,0.0
 "Nukak Maku (Se Incluyen Huphu, Juhup, Jujupda, Kakua)",4,3,0.0,75.0
 Nutabe,2,2,0.0,100.0
 Ocaina,7,0,0.0,0.0
-Otro grupo étnico minoritario,59435,37205,0.83,62.6
-Paez,10814,3691,0.15,34.13
-Paez (Autodenominacion Nasa),4816,1293,0.07,26.85
+Otro grupo étnico minoritario,59435,29141,0.83,49.03
+Paez,10814,2421,0.15,22.39
+Paez (Autodenominacion Nasa),4816,1287,0.07,26.72
 Paez totoro,17,7,0.0,41.18
-Palenquero,529,275,0.01,51.98
-Pasto,19618,9654,0.27,49.21
+Palenquero,529,216,0.01,40.83
+Pasto,19618,7698,0.27,39.24
 Piaora,64,5,0.0,7.81
 Piapoco,577,94,0.01,16.29
 Piapoco sikuani,5,0,0.0,0.0
 Piaroa,34,12,0.0,35.29
-Pijao,7334,3417,0.1,46.59
-Piratapuyo,46,11,0.0,23.91
+Pijao,7334,2969,0.1,40.48
+Piratapuyo,46,10,0.0,21.74
 Pisamira,4,1,0.0,25.0
 Polindaras,107,24,0.0,22.43
-Puinave,232,79,0.0,34.05
+Puinave,232,76,0.0,32.76
 Puinave curripaco,8,1,0.0,12.5
-Quillacingas,217,73,0.0,33.64
-Raizal,2558,1793,0.04,70.09
-Raizal o palenquero,521,364,0.01,69.87
+Quillacingas,217,72,0.0,33.18
+Raizal,2558,1589,0.04,62.12
+Raizal o palenquero,521,294,0.01,56.43
 Saliva (Saliba),130,27,0.0,20.77
 Siapidara,14,2,0.0,14.29
-Sikuani,2443,654,0.03,26.77
-Siona,36,11,0.0,30.56
+Sikuani,2443,534,0.03,21.86
+Siona,36,10,0.0,27.78
 Siriano,68,9,0.0,13.24
 Taganga,25,4,0.0,16.0
 Taiwano,6,0,0.0,0.0
@@ -119,34 +119,34 @@ Tama,1,0,0.0,0.0
 Tamas (Dujos De Paniquita),3,1,0.0,33.33
 Tamas paez,2,1,0.0,50.0
 Tanimuka,48,3,0.0,6.25
-Tariano,2,1,0.0,50.0
-Tatuyo,44,6,0.0,13.64
-Tikuna,672,76,0.01,11.31
-Totoró,307,71,0.0,23.13
+Tariano,2,0,0.0,0.0
+Tatuyo,44,5,0.0,11.36
+Tikuna,672,75,0.01,11.16
+Totoró,307,66,0.0,21.5
 Tsiripu (Tshiripo),1,0,0.0,0.0
-Tucano,658,309,0.01,46.96
+Tucano,658,245,0.01,37.23
 Tunebo,1,0,0.0,0.0
 Tuyuca,73,5,0.0,6.85
-Uitotos (Huitoto - Witoto),209,44,0.0,21.05
+Uitotos (Huitoto - Witoto),209,42,0.0,20.1
 U´Wa,139,36,0.0,25.9
-Wanano,97,22,0.0,22.68
-Waunan,64,15,0.0,23.44
-Waunana,15,5,0.0,33.33
-Waunana (Wounaan),661,141,0.01,21.33
-Wayúu,25483,8589,0.36,33.7
+Wanano,97,21,0.0,21.65
+Waunan,64,10,0.0,15.62
+Waunana,15,4,0.0,26.67
+Waunana (Wounaan),661,123,0.01,18.61
+Wayúu,25483,7126,0.36,27.96
 Wipiwi,2,0,0.0,0.0
-Wiwa,453,155,0.01,34.22
+Wiwa,453,154,0.01,34.0
 Wounan,125,18,0.0,14.4
 Yagua,19,4,0.0,21.05
 Yamalero,2,1,0.0,50.0
-Yanacona,1104,391,0.02,35.42
+Yanacona,1104,379,0.02,34.33
 Yari,2,0,0.0,0.0
 Yauna,5,0,0.0,0.0
 Yucuna,75,12,0.0,16.0
-Yuko (Yukpa),123,16,0.0,13.01
+Yuko (Yukpa),123,14,0.0,11.38
 Yuri,5,0,0.0,0.0
 Yuriti,3,0,0.0,0.0
-Yuruti (Tapuya),27,4,0.0,14.81
-Zenu (Senu),17279,5072,0.24,29.35
-Zenú,22214,10967,0.31,49.37
-,5358404,3007212,75.06,56.12
+Yuruti (Tapuya),27,3,0.0,11.11
+Zenu (Senu),17279,5043,0.24,29.19
+Zenú,22214,8237,0.31,37.08
+,5358404,2677053,75.06,49.96

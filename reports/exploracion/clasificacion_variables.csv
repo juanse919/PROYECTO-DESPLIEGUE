@@ -59,11 +59,11 @@ enroll4,Matrícula en el cuarto programa,float64,Posterior al ingreso (excluir)
 year_activo4,Año activo en el cuarto programa,float64,Posterior al ingreso (excluir)
 year_enrolls4,Años inscritos en el cuarto programa,float64,Posterior al ingreso (excluir)
 id_mun_programa4,Código del municipio del cuarto programa,float64,Posterior al ingreso (excluir)
-enroll_full,Ingreso a educación superior,int8,Objetivo
+enroll_full,Ingreso a educación superior,int8,Objetivo alterno (excluir)
 prim_year1,Año del primer programa,float64,Posterior al ingreso (excluir)
 year_enrolled,Año de ingreso a educación superior,float64,Posterior al ingreso (excluir)
 ventana_sb11_es,Ventana entre Saber 11° e ingreso a educación superior,float64,Posterior al ingreso (excluir)
-enroll_5years,Ingreso a educación superior hasta 5 años después de Saber 11°,int8,Objetivo alterno (excluir)
+enroll_5years,Ingreso a educación superior hasta 5 años después de Saber 11°,int8,Objetivo
 enroll_3years,Ingreso a educación superior hasta 3 años después de Saber 11°,int8,Objetivo alterno (excluir)
 enroll_tti,Ingreso inmediato a educación superior,int8,Objetivo alterno (excluir)
 estu_cod_reside_mcpio_p,Código del municipio de residencia - Saber Pro y TyT,str,Posterior al ingreso (excluir)
