@@ -1,0 +1,23 @@
+# Levanta la API y el tablero en la misma máquina:  docker compose up -d --build
+services:
+  api:
+    build: ./api
+    image: ingreso-api:latest
+    environment:
+      - PORT=8001
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+
+  dashboard:
+    build: ./dashboard
+    image: ingreso-dashboard:latest
+    environment:
+      - PORT=8050
+      # Dentro de la red de Docker, el tablero llega a la API por el nombre del servicio
+      - API_URL=http://api:8001
+    ports:
+      - "8050:8050"
+    depends_on:
+      - api
+    restart: unless-stopped
