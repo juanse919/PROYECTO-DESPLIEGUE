@@ -1,0 +1,4 @@
+include modelo_ingreso/VERSION
+include modelo_ingreso/config.yml
+include modelo_ingreso/trained/*.pkl
+include requirements/*.txt

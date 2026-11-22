@@ -1,0 +1,3 @@
+# Scripts de arranque de los contenedores siempre con finales de línea de Linux
+*.sh text eol=lf
+Dockerfile text eol=lf

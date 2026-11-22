@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelo_ingreso"
+dynamic = ["version", "dependencies"]
+description = "Modelo XGBoost de riesgo de no ingreso a la educación superior en los 5 años posteriores a Saber 11"
+requires-python = ">=3.10"
+authors = [{ name = "Grupo 6 - MIAD, Despliegue de Soluciones Analíticas" }]
+
+[tool.setuptools.dynamic]
+version = { file = "modelo_ingreso/VERSION" }
+dependencies = { file = ["requirements/requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["modelo_ingreso*"]
+
+[tool.setuptools.package-data]
+modelo_ingreso = ["VERSION", "config.yml", "trained/*.pkl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

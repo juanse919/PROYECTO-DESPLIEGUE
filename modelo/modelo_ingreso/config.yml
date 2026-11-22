@@ -1,0 +1,55 @@
+# Configuración del modelo de riesgo de no ingreso a la educación superior
+
+nombre_paquete: modelo_ingreso
+nombre_modelo_guardado: modelo_ingreso_v
+
+# Datos (ruta relativa a la carpeta modelo/; se puede cambiar con la variable de entorno RUTA_DATOS)
+ruta_datos: "../data/Base de Datos (MIAD).dta"
+fraccion_muestra: 0.05
+tamano_bloque: 100000
+semilla: 42
+
+# Cohortes de Saber 11
+columna_cohorte: año
+cohortes_entrenamiento: [2012, 2017]
+cohortes_validacion: [2018, 2019]
+
+# Variable objetivo de la base y variable que predice el modelo (1 = no ingresa en 5 años)
+objetivo_base: enroll_5years
+objetivo: riesgo_no_ingreso
+
+variables_numericas:
+  - estu_edad
+  - punt_matematicas
+  - punt_ingles
+  - punt_lectura_critica
+  - punt_c_naturales
+  - fami_cuartoshogar
+  - fami_personashogar
+
+variables_categoricas:
+  - estu_genero
+  - cole_genero
+  - cole_calendario
+  - cole_area_ubicacion
+  - cole_jornada
+  - cole_cod_depto_ubicacion
+  - estu_tieneetnia
+  - fami_educacionmadre
+  - fami_estratovivienda
+  - fami_tienecomputador
+  - fami_tieneinternet
+  - cole_naturaleza
+
+# Hiperparámetros de XGBoost (los mismos de la evaluación en el notebook 02)
+n_estimators: 250
+max_depth: 5
+learning_rate: 0.05
+subsample: 0.8
+colsample_bytree: 0.8
+
+# Umbral de probabilidad para generar la alerta de riesgo
+umbral: 0.35
+
+# MLflow
+nombre_experimento: "MIAD - Prediccion ingreso educacion superior"
