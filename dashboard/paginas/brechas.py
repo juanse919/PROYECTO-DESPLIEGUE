@@ -67,18 +67,33 @@ def _grafica_deciles():
     """Mostrar la tasa observada de ingreso según decil de matemáticas."""
     fig = go.Figure(go.Scatter(
         x=DECILES["decil_mat"],
-        y=DECILES["enroll_full"],
+        y=DECILES["enroll_5years"],
         mode="lines+markers+text",
         line=dict(color=AZUL, width=3),
         marker=dict(color=TURQUESA, size=9),
-        text=[f"{formato_numero(valor, 1)}%" for valor in DECILES["enroll_full"]],
+        text=[
+            f"{formato_numero(valor, 1)}%"
+            for valor in DECILES["enroll_5years"]
+        ],
         textposition="top center",
-        hovertemplate="Decil %{x}<br>Tasa de ingreso: %{y:.2f} %<extra></extra>",
+        hovertemplate=(
+            "Decil %{x}"
+            "<br>Tasa de ingreso: %{y:.2f} %"
+            "<extra></extra>"
+        ),
     ))
-    fig.update_xaxes(title="Decil de puntaje en matemáticas", dtick=1)
-    fig.update_yaxes(title="Tasa de ingreso (%)", range=[0, 100], ticksuffix=" %")
-    return aplicar_formato(fig, alto=330)
 
+    fig.update_xaxes(
+        title="Decil de puntaje en matemáticas",
+        dtick=1
+    )
+    fig.update_yaxes(
+        title="Tasa de ingreso (%)",
+        range=[0, 100],
+        ticksuffix=" %"
+    )
+
+    return aplicar_formato(fig, alto=330)
 
 def _indicador(titulo, valor, detalle):
     """Crear una tarjeta de indicador con el estilo del dashboard."""
