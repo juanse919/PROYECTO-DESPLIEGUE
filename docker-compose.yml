@@ -10,7 +10,10 @@ services:
     restart: unless-stopped
 
   dashboard:
-    build: ./dashboard
+    # Se construye desde la raíz porque el tablero necesita reports/exploracion
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
     image: ingreso-dashboard:latest
     environment:
       - PORT=8050

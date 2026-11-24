@@ -1,0 +1,9 @@
+.git
+.dvc
+data
+api
+modelo
+*.ipynb
+reports/modelos
+**/__pycache__
+**/*.pyc
